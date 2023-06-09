@@ -89,7 +89,7 @@ while (count <= numeroFinall) {
 let count2 = 100;
 let numeroFinalll = 0;
 
-while (count2 >= numeroFinalll) {
+while (count2 <= numeroFinall) {
   let resposta3 = count2--
   console.log("RESPOSTA WHILE AQUI --> ", resposta3)
 }

@@ -89,10 +89,12 @@ if (idade >= 16 && idade <= 18) {
   console.log("Eleitor não apto para votar");
 }
 // 25
-if (idadeEleitor >= 16 && idadeEleitor <= 64 && possuiTitulo || idadeEleitor > 0 || idadeEleitor === "pov"){
+if (idadeEleitor >= 16 && idadeEleitor <= 64 && possuiTitulo || idadeEleitor > 0 || typeof idadeEleitor === Number){
     
-
-} // ao mesmo tempo
+    console.log("é adulto mas não pode votar")
+} 
+console.log(Number);
+console.log("AQUIIIIIIIIIIIIIIIIII -->", typeof idadeEleitor === Number);
 
 
 
@@ -151,3 +153,10 @@ let somaDosValores = 1;
 
 
 
+let numeroQualquer = 10 // fica ai bem doidao e é isso.
+if (typeof numeroQualquer === "number") {
+    console.log(typeof numeroQualquer)
+
+} else {
+
+}

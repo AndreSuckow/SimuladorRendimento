@@ -3,7 +3,7 @@
 // maiores de 18 anos --> maior de idade sem carteirinha (inteira)
 // maiores de 60 anos (idosos) --> idade >= 60 anos (meia)
 
-let idadePessoa = 50;
+let idadePessoa = 18;
 let NaoTemCarteirinha = true;
 const AdultoNaoIdoso = idadePessoa >=18 && idadePessoa < 60; // idade entre 18 e 59 anos; verdade / verdade
 if (AdultoNaoIdoso && NaoTemCarteirinha) {

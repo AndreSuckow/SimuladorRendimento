@@ -2,7 +2,7 @@ let precoProduto1 = 30;
 console.log("Preço do produto é:", precoProduto1);
 
 precoProduto1 = precoProduto1 + 1;
-// precoProduto1 += 1; --> é a mesma coisa que escrever a linha acima (forma contrada)
+// precoProduto1 += 1; --> é a mesma coisa que escrever a linha acima (forma contraída)
 
 // dando desconto a um produto:
 let produtoSemDesconto = 100;

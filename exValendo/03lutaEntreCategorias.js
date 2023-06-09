@@ -98,7 +98,7 @@ function solucao(peso1, peso2) {
 
 }
 
-//solucao(85, 88);
+solucao(85, 88);
 
 
 

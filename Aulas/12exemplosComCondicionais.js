@@ -1,6 +1,6 @@
-let productPrice1 = 19.29;
-let productPrice2 = 2.15;
-let productPrice3 = 4.85;
+let productPrice1 = 15;
+let productPrice2 = 1.45;
+let productPrice3 = 4.10;
 let somaProducts = 0;
 
 if (productPrice1 <= 20 ) {
