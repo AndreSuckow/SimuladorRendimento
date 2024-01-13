@@ -38,44 +38,71 @@ function calcularTempoEValor(anos, valorDeposito) {
 // dado de entrada: valor entrada mensal, até que objetivo final seja cumprido.
 
 function mesesParaAnos(meses, valorDeposito, objetivoFinal) {
-    const rendimentoCDIAnual = 13.65;
-    const rendimentoCDIMensal = rendimentoCDIAnual / 12;
+  const rendimentoCDIAnual = 13.65;
+  const rendimentoCDIMensal = rendimentoCDIAnual / 12;
 
-    let numeroMeses = 0;
-    let saldo = 0;
-    let totalDepositos = 0;
+  let numeroMeses = 0;
+  let saldo = 0;
+  let totalDepositos = 0;
 
-    while (saldo < objetivoFinal) {
-        let rendimento = saldo * rendimentoCDIMensal / 100;
-        saldo += valorDeposito + rendimento;
-        numeroMeses++;
-        totalDepositos += valorDeposito;
+  while (saldo < objetivoFinal) {
+    let rendimento = (saldo * rendimentoCDIMensal) / 100;
+    saldo += valorDeposito + rendimento;
+    numeroMeses++;
+    totalDepositos += valorDeposito;
 
-        // Valor do depósito e valor acumulado apenas pelos juros
-        console.log("Mês " + numeroMeses + ": Depósito: " + valorDeposito.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + ", Rendimento: " + rendimento.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
-    }
+    // Valor do depósito e valor acumulado apenas pelos juros
+    console.log(
+      "Mês " +
+        numeroMeses +
+        ": Depósito: " +
+        valorDeposito.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        }) +
+        ", Rendimento: " +
+        rendimento.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })
+    );
+  }
 
-    var anos = Math.floor(numeroMeses / 12);
-    var mesesRestantes = numeroMeses % 12;
+  var anos = Math.floor(numeroMeses / 12);
+  var mesesRestantes = numeroMeses % 12;
 
-    var valorAcumulado = saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  var valorAcumulado = saldo.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 
-    var valorJuros = (saldo - totalDepositos).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  var valorJuros = (saldo - totalDepositos).toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 
-    var valorDepositosAcumulado = totalDepositos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  var valorDepositosAcumulado = totalDepositos.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 
-    console.log("%cValor acumulado dos depósitos: " + valorDepositosAcumulado, "color: red");
-    console.log("%cValor total acumulado apenas de juros: " + valorJuros, "color: blue");
-    console.log("%cValor final acumulado: " + valorAcumulado, "color: green");
+  console.log(
+    "%cValor acumulado dos depósitos: " + valorDepositosAcumulado,
+    "color: red"
+  );
+  console.log(
+    "%cValor total acumulado apenas de juros: " + valorJuros,
+    "color: blue"
+  );
+  console.log("%cValor final acumulado: " + valorAcumulado, "color: green");
 
-    return "tempo estimado: " + anos + " anos e " + mesesRestantes + " meses";
+  return "tempo estimado: " + anos + " anos e " + mesesRestantes + " meses";
 }
 
 // Exemplo de uso
-var mesesTotais = 12; // Total de meses
+var mesesTotais = 36; // Total de meses
 var valorDeposito = 100000;
-var objetivoFinal = 10000000000;
+var objetivoFinal = 10000000;
 
 var resultado = mesesParaAnos(mesesTotais, valorDeposito, objetivoFinal);
 console.log(resultado); // Imprime o resultado
-
